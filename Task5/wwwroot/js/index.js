@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
     canvas.hoverCursor = 'pointer'
     canvas.setWidth(1600)
     canvas.setHeight(900)
+    canvas.selection = false
     canvas.setDimensions({ width: "100%", height: "100%" }, { cssOnly: true })
     const connection = new signalR.HubConnectionBuilder().withUrl("/canvas").build()
     const elementTypes = {
@@ -32,13 +33,16 @@ window.addEventListener('load', () => {
                 id: elementData.id,
                 left: elementData.left,
                 top: elementData.top,
-                fontSize: 20,
+                fontSize: 50,
                 lockRotation: true,
                 lockScalingX: true,
                 lockScalingY: true,
+                hasRotatingPoint: false
             })
             canvas.add(newTextElement)
-            canvas.setActiveObject(newTextElement)
+            if (state === states.note) {
+                canvas.setActiveObject(newTextElement)
+            }
         } else if (elementData.elementType === elementTypes.note) {
             let newNoteElement = new fabric.Image(document.getElementById("note"), {
                 id: elementData.id,
