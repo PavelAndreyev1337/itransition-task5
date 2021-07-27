@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap@5.0.2",
+      "destination": "wwwroot/lib/bootstrap/",
+      "files": [
+        "css/bootstrap.min.css",
+        "js/bootstrap.bundle.min.js"
+      ]
+    },
+    {
+      "library": "bootstrap-icons@1.5.0",
+      "destination": "wwwroot/lib/bootstrap-icons/",
+      "files": [
+        "font/fonts/bootstrap-icons.woff",
+        "font/bootstrap-icons.min.css"
+      ]
+    },
+    {
+      "library": "fabric.js@4.5.0",
+      "destination": "wwwroot/lib/fabric.js/",
+      "files": [
+        "fabric.min.js"
+      ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "@microsoft/signalr@5.0.8",
+      "destination": "wwwroot/lib/microsoft/signalr/",
+      "files": [
+        "dist/browser/signalr.min.js"
+      ]
+    }
+  ]
+}

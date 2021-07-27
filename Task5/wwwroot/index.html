@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-icons/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="row m-0">
+        <div class="col-2 bg-dark vh-100">
+            <ul class="nav nav-pills flex-column flex-nowrap text-break m-auto mt-3">
+                <li class="nav-item">
+                    <a id="textTool" href="#" class="nav-link text-white" aria-current="page">
+                        <i class="bi bi-type"></i>
+                        Text
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="noteTool" href="#" class="nav-link text-white" aria-current="page">
+                        <i class="bi bi-sticky"></i>
+                        Note
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="drawingTool" href="#" class="nav-link text-white" aria-current="page">
+                        <i class="bi bi-pencil"></i>
+                        Drawing
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="eraserTool" href="#" class="nav-link text-white" aria-current="page">
+                        <i class="bi bi-eraser"></i>
+                        Eraser
+                    </a>
+                </li>
+            </ul>  
+        </div>
+        <div class="col-10 vh-100">
+            <canvas id="board" class="w-100 h-100">
+                Your browser doesn't support
+            </canvas>
+            <img id="note" src="./img/note.png" class="d-none">
+        </div>
+    </div>
+    <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/fabric.js/fabric.min.js"></script>
+    <script src="./lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
